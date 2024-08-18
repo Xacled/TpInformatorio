@@ -1,18 +1,24 @@
-import { useState } from 'react'
+import Header from "./components/Header";
+import QuickPicks from "./components/QuickPicks";
+import RecommendedAlbums from "./components/RecommendedAlbums";
+import SimilarArtists from "./components/SimilarArtists";
+import PlaybackBar from "./components/PlaybackBar";
+import "./App.css";
+import ListenAgain from "./components/ListenAgain";
 
-
-import './App.css'
-import React from 'react'
-import Header from './Header'
 function App() {
-
-
   return (
-    <>
-      <Header/>
-      
-    </>
-  )
+    <div className="app">
+      <Header />
+      <main className="main-content">
+        <ListenAgain />
+        <QuickPicks />
+        <RecommendedAlbums />
+        <SimilarArtists />
+      </main>
+      <PlaybackBar />
+    </div>
+  );
 }
 
-export default App
+export default App;

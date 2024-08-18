@@ -41,12 +41,61 @@
   color: #888;
 } */
 
-.nav-bar{
-  justify-content: center;
-  
+
+/* Estilos globales para la aplicación */
+
+body {
+  margin: 0;
+  padding-top: 100px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #181818;
+  color: white;
 }
 
-.background-nav{
-  background-color: aqua;
-  width: 100%;
-} 
+.app-container {
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px;
+  }
+
+  .song-list, .album-list, .artist-list {
+    gap: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Ajuste general de scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
