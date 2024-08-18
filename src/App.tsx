@@ -5,16 +5,19 @@ import SimilarArtists from "./components/SimilarArtists";
 import PlaybackBar from "./components/PlaybackBar";
 import "./App.css";
 import ListenAgain from "./components/ListenAgain";
+import ContentLeft from "./components/ContentLeft";
 
 function App() {
   return (
     <div className="app">
       <Header />
+      <ContentLeft/>
+
       <main className="main-content">
         <ListenAgain />
+        <SimilarArtists />
         <QuickPicks />
         <RecommendedAlbums />
-        <SimilarArtists />
       </main>
       <PlaybackBar />
     </div>
