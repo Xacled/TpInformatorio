@@ -1,5 +1,4 @@
 import './Components.css';
-import Profile from './Profile';
 
 function SongCard({ song }: any) {
   return (

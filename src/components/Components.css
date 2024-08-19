@@ -91,45 +91,6 @@
   border-radius: 50%;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .nav-bar {
-    flex-direction: row;
-    height: auto;
-    padding: 10px;
-  }
-
-  .center-section {
-    width: 100%;
-    margin-top: 10px;
-    padding: 0px;
-  }
-
-  .search-bar {
-    width: 100%;
-  }
-
-  .left-section,
-  .right-section {
-    justify-content: center;
-    width: 30%;
-    padding: 0px;
-  }
-
-  .left-section .texto {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .search-bar {
-    width: 100%;
-  }
-
-  .left-section .texto {
-    display: none;
-  }
-}
 
 /* Album Card */
 .album-card {
@@ -521,24 +482,3 @@
   background-color: #222;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar {
-    width: 150px;
-    padding: 10px;
-  }
-
-  .menu-item {
-    font-size: 14px;
-  }
-
-  .new-playlist-btn {
-    font-size: 14px;
-  }
-}
