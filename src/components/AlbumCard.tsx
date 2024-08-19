@@ -1,6 +1,6 @@
 import './Components.css';
 
-function AlbumCard({ album }) {
+function AlbumCard({ album }: any) {
   return (
     <div className="album-card">
       <img src={album.cover} alt={album.title} className="album-cover" />

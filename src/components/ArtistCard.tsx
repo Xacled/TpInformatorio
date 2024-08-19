@@ -1,6 +1,6 @@
 import './Components.css';
 
-function ArtistCard({ artist }) {
+function ArtistCard({ artist }: any) {
   return (
     <div className="artist-card">
       <img src={artist.picture} alt={artist.name} className="artist-picture" />
