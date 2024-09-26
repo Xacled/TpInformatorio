@@ -1,6 +1,8 @@
-import { listenAgainSongs, quickPickSongs, recommendedAlbums, similarArtists } from '../data/musicData';
+import {  quickPickSongs, recommendedAlbums, similarArtists } from '../data/musicData';
 import './Components.css';
 import Profile from './Header/Profile';
+
+
 
 
 //Componente de los artistcas
@@ -28,21 +30,6 @@ export function AlbumCard({ album }: any) {
   );
 }
 
-//Componente para Escuchar De nuevo
-export function ListenAgain() {
-  return (
-    <section className="listen-again">
-      
-      <Profile text="Sufyan Ali" text2="Listen Again" />
-
-      <div className="song-list">
-        {listenAgainSongs.map((song) => (
-          <SongCard key={song.id} song={song} />
-        ))}
-      </div>
-    </section>
-  );
-}
 
 //Componente para quickpicks
 export function QuickPicks() {
