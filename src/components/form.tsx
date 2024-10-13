@@ -1,17 +1,31 @@
 import { useEffect, useState } from "react";
 import "./Components.css";
 
+interface Playlist {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+interface PlaylistFormProps {
+  newPlaylist: Playlist;
+  onFormChange: (field: keyof Playlist, value: string) => void;
+  onAddPlaylist: () => void;
+  onCancel: () => void;
+}
+
 export default function PlaylistForm({
   newPlaylist,
   onFormChange,
   onAddPlaylist,
-}) {
+  onCancel, // Nueva prop para manejar el botón de cancelar
+}: PlaylistFormProps) {
   const [isFormComplete, setIsFormComplete] = useState(false);
 
   useEffect(() => {
-    // Check if all fields are filled
+    // Comprobar si todos los campos están completos
     const { title, description, imageUrl } = newPlaylist;
-    setIsFormComplete(title && description && imageUrl);
+    setIsFormComplete(!!title && !!description && !!imageUrl);
   }, [newPlaylist]);
 
   return (
@@ -48,21 +62,31 @@ export default function PlaylistForm({
             onChange={(e) => onFormChange("imageUrl", e.target.value)}
           />
         </div>
-        <div >
+        <div className="form-buttons" >
           <button
             type="button"
             className="submit-btn"
             onClick={onAddPlaylist}
             disabled={!isFormComplete}
+            style={{ opacity: isFormComplete ? 1 : 0.5 }}
           >
             Agregar Playlist
+          </button>
+          {/* Botón de cancelar */}
+          <button
+            type="button"
+            className="cancel-btn"
+            onClick={onCancel}
+            style={{backgroundColor:'white',color:'black'}}
+          >
+            Cancelar
           </button>
         </div>
       </form>
 
       {/* Vista previa en tiempo real */}
       <div className="playlist-preview">
-         {newPlaylist.imageUrl && (
+        {newPlaylist.imageUrl && (
           <img
             src={newPlaylist.imageUrl}
             alt="Preview"
