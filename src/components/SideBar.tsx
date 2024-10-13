@@ -1,6 +1,6 @@
 import "./Components.css";
 
-export default function ContentLeft({ onNewPlaylistClick, playlists }) {
+export default function ContentLeft({ onNewPlaylistClick, playlists }:any) {
   return (
     <div className="container-left">
       <div className="menu-item active">
@@ -17,7 +17,7 @@ export default function ContentLeft({ onNewPlaylistClick, playlists }) {
           + New playlist
         </button>
         <div className="playlist-list">
-          {playlists.map((playlist, index) => (
+          {playlists.map((playlist:any , index:any) => (
             <div key={index} className="playlist-item">
               <img
                 src={playlist.imageUrl}
