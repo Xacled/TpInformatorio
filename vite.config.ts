@@ -4,5 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:'https://Xacled.github.io/TpInformatorio'
+  base:'/TpInformatorio',
+  build: {
+    sourcemap: false,  // Desactiva los source maps en producción
+  },
 })

@@ -1,12 +1,11 @@
-"use client";
 import { useState } from "react";
 import Header from "../src/components/Header/Header";
 import "./App.css";
-import {  QuickPicks, RecommendedAlbums, SimilarArtists } from "./components/Componentes";
+import {  QuickPicks, RecommendedAlbums } from "./components/Componentes";
 import ContentLeft from "./components/SideBar";
 import PlaylistForm from "./components/form";
-// import { ListenAgain } from "./components/ListenAgain";
 import { ListenAgain } from "./components/ListenAgain";
+import { SimilarArtists } from "./components/SimilarArtists";
 
 interface Playlist {
   title: string;

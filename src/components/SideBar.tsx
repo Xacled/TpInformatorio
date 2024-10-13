@@ -3,7 +3,7 @@ import "./Components.css";
 export default function ContentLeft({ onNewPlaylistClick, playlists }:any) {
   return (
     <div className="container-left">
-      <div className="menu-item active">
+      <div className="menu-item active" onClick={() => window.location.href = '/'}>
         <i className="icon">I</i>
         <span>Home</span>
       </div>
